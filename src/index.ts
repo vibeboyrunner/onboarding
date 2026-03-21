@@ -8,6 +8,11 @@ app.get("/hello", (req, res) => {
   res.json({ message: `Hello, ${name}!` });
 });
 
+app.get("/goodbye", (req, res) => {
+  const name = typeof req.query.name === "string" ? req.query.name : "World";
+  res.json({ message: `Goodbye, ${name}!` });
+});
+
 app.get("/health", (_req, res) => {
   res.json({ status: "ok" });
 });
