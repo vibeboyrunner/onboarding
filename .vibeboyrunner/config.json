@@ -1,0 +1,10 @@
+{
+  "bindings": {
+    "ports": {
+      "APP_PORT": 3000
+    },
+    "envs": {
+      "NODE_ENV": "development"
+    }
+  }
+}

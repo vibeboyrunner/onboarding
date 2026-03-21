@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .vibeboyrunner/Dockerfile
+    ports:
+      - "${APP_PORT:-3000}:${APP_PORT:-3000}"
+    environment:
+      - APP_PORT=${APP_PORT:-3000}
+      - NODE_ENV=${NODE_ENV:-development}
+    volumes:
+      - ..:/app
+    working_dir: /app
